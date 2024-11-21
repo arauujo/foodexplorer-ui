@@ -122,7 +122,7 @@ export default {
     ROBOTO_GIANT_BOLD: {
       fontFamily: '"Roboto", serif',
       fontWeight: '700',
-      fontSize: '42px',
+      fontSize: '2.63rem',
       lineHeight: 'normal',
     }
   }

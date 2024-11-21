@@ -9,15 +9,25 @@ export default createGlobalStyle`
   }
   
   :root {
-    font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR.fontSize};
+    font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALLEST_REGULAR.fontSize};
+    
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+      font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALLER_REGULAR.fontSize};
+    }
 
-    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
-      font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALLEST_REGULAR.fontSize};
+    @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
+      font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR.fontSize};
+    }
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.XXL}) {
+      font-size: ${({ theme }) => theme.FONTS.ROBOTO_BIG_BOLD.fontSize};
     }
   }
 
   body {
     height: 100vh;
+    display: grid;
+    place-items: center;
     background-color: ${({ theme }) => theme.COLORS.DARK_400};
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
     -webkit-font-smoothing: antialiased;
@@ -35,7 +45,7 @@ export default createGlobalStyle`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.COLORS.PINK};
+    background-color: ${({ theme }) => theme.COLORS.DARK_700};
     border-radius: 0.5rem;
   }
 
