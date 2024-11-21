@@ -13,6 +13,7 @@ export function SignIn() {
       </div>
 
       <Form>
+        <h2 className="desktop-only">Faça login</h2>
         <Input
           label="Email"
           type="email"
@@ -25,7 +26,7 @@ export function SignIn() {
           placeholder="No mínimo 6 caracteres"
         />
 
-        <Button disabled title="Entrar" />
+        <Button title="Entrar" />
 
         <ButtonText title="Criar uma conta" />
       </Form>
