@@ -44,7 +44,7 @@ export function SignUp() {
       </div>
 
       <Form onKeyDown={handleKeydown}>
-        <h2 className="desktop-only">Faça login</h2>
+        <h2 className="desktop-only">Crie sua conta</h2>
         <Input
           label="Seu nome"
           type="text"
