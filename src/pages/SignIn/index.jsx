@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useAuth } from "../../hooks/auth";
 import { Container, Form } from "./styles";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
@@ -7,8 +9,21 @@ import polygonImg from "../../assets/polygon.svg";
 
 export function SignIn() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { signIn } = useAuth();
 
-  const handleCreateAccount = () => {
+  const handleSignIn = () => {
+    signIn({ email, password });
+  };
+
+  function handleKeydown(evt) {
+    if (evt.key === "Enter") {
+      handleSignIn();
+    }
+  }
+
+  const handleSignUp = () => {
     navigate("/register");
   };
 
@@ -26,6 +41,7 @@ export function SignIn() {
           type="email"
           placeholder="Exemplo: exemplo@exemplo.com.br"
           autoComplete="email"
+          onChange={e => setEmail(e.target.value)}
         />
 
         <Input
@@ -33,11 +49,13 @@ export function SignIn() {
           type="password"
           placeholder="No mínimo 6 caracteres"
           autoComplete="current-password"
+          onChange={e => setPassword(e.target.value)}
+          onKeyDown={handleKeydown}
         />
 
-        <Button title="Entrar" />
+        <Button title="Entrar" onClick={handleSignIn} />
 
-        <ButtonText title="Criar uma conta" onClick={handleCreateAccount} />
+        <ButtonText title="Criar uma conta" onClick={handleSignUp} />
       </Form>
     </Container>
   );
