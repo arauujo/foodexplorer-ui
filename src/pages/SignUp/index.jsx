@@ -20,7 +20,7 @@ export function SignUp() {
       navigate("/");
     } catch (error) {
       if (error.response?.data) {
-        return alert(error.response.data.details);
+        return alert(error.response.data.message);
       }
       alert("Erro ao cadastrar o usuário!");
     }
