@@ -34,7 +34,7 @@ export function SignIn() {
         <h1>food explorer</h1>
       </div>
 
-      <Form>
+      <Form onKeyDown={handleKeydown}>
         <h2 className="desktop-only">Faça login</h2>
         <Input
           label="Email"
@@ -50,7 +50,6 @@ export function SignIn() {
           placeholder="No mínimo 6 caracteres"
           autoComplete="current-password"
           onChange={e => setPassword(e.target.value)}
-          onKeyDown={handleKeydown}
         />
 
         <Button title="Entrar" onClick={handleSignIn} />
