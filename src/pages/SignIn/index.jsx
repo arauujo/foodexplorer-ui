@@ -17,11 +17,11 @@ export function SignIn() {
     signIn({ email, password });
   };
 
-  function handleKeydown(evt) {
+  const handleKeydown = evt => {
     if (evt.key === "Enter") {
       handleSignIn();
     }
-  }
+  };
 
   const handleSignUp = () => {
     navigate("/register");
