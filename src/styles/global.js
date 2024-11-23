@@ -79,7 +79,7 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
-  button:focus, input:focus, textarea:focus {
+  button:focus-visible, input:focus-visible, textarea:focus-visible {
     outline: 1px solid ${({ theme }) => theme.COLORS.LIGHT_600};
   }
 `;
