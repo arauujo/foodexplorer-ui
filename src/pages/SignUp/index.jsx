@@ -26,6 +26,12 @@ export function SignUp() {
     }
   };
 
+  const handleKeydown = evt => {
+    if (evt.key === "Enter") {
+      handleSignUp();
+    }
+  };
+
   const handleSignIn = () => {
     navigate("/");
   };
@@ -37,7 +43,7 @@ export function SignUp() {
         <h1>food explorer</h1>
       </div>
 
-      <Form>
+      <Form onKeyDown={handleKeydown}>
         <h2 className="desktop-only">Faça login</h2>
         <Input
           label="Seu nome"
