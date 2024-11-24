@@ -10,6 +10,10 @@ export default createGlobalStyle`
   
   :root {
     font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALLEST_REGULAR.fontSize};
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.SM}) {
+      font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALLER_REGULAR.fontSize}
+    }
     
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
       font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALLER_REGULAR.fontSize};
@@ -37,6 +41,10 @@ export default createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .desktop-only {
+    display: none;
   }
 
   &::-webkit-scrollbar {
