@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { api } from "../services/api";
 
 export const AuthContext = createContext({});
@@ -31,6 +31,16 @@ function AuthProvider({ children }) {
       alert("Não foi possível autenticar.");
     }
   }
+
+  useEffect(() => {
+    const user = localStorage.getItem("@foodexplorer:user");
+    const token = localStorage.getItem("foodexplorer:token");
+
+    if (user && token) {
+      api.defaults.headers.common.Authorization = `Bearer ${token}`;
+      setData({ user: JSON.parse(user), token });
+    }
+  }, []);
 
   return (
     <AuthContext.Provider value={{ signIn, user: data.user }}>
