@@ -41,13 +41,6 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 32px;
 
-  > h2 {
-    font-family: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.fontFamily};
-    font-size: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.fontSize};
-    font-weight: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.fontWeight};
-    line-height: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.lineHeight};
-  }
-
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     background-color: ${({ theme }) => theme.COLORS.DARK_700};
     padding: 64px;
@@ -57,6 +50,25 @@ export const Form = styled.form`
     .desktop-only {
       display: block;
       text-align: center;
+    }
+  }
+
+  > h2 {
+    font-family: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.fontFamily};
+    font-size: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.fontSize};
+    font-weight: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.fontWeight};
+    line-height: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.lineHeight};
+  }
+
+  > .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+      input {
+        border: 1px solid ${({ theme }) => theme.COLORS.LIGHT_100};
+      }
     }
   }
 `;

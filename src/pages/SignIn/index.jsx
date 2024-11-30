@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../../hooks/auth";
 import { Container, Form } from "./styles";
+import { Label } from "../../components/Label";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { ButtonText } from "../../components/ButtonText";
@@ -36,21 +37,26 @@ export function SignIn() {
 
       <Form onKeyDown={handleKeydown}>
         <h2 className="desktop-only">Faça login</h2>
-        <Input
-          label="Email"
-          type="email"
-          placeholder="Exemplo: exemplo@exemplo.com.br"
-          autoComplete="email"
-          onChange={e => setEmail(e.target.value)}
-        />
 
-        <Input
-          label="Senha"
-          type="password"
-          placeholder="No mínimo 6 caracteres"
-          autoComplete="current-password"
-          onChange={e => setPassword(e.target.value)}
-        />
+        <div className="input-container">
+          <Label>Email</Label>
+          <Input
+            type="email"
+            placeholder="Exemplo: exemplo@exemplo.com.br"
+            autoComplete="email"
+            onChange={e => setEmail(e.target.value)}
+          />
+        </div>
+
+        <div className="input-container">
+          <Label>Senha</Label>
+          <Input
+            type="password"
+            placeholder="No mínimo 6 caracteres"
+            autoComplete="current-password"
+            onChange={e => setPassword(e.target.value)}
+          />
+        </div>
 
         <Button title="Entrar" onClick={handleSignIn} />
 
