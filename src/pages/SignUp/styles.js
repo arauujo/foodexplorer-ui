@@ -32,7 +32,7 @@ export const Container = styled.div`
     margin-top: -2.2rem;
     padding: 0 6.75rem 0 9.62rem;
     flex-direction: row;
-    justify-content: space-between;    
+    justify-content: space-between;
   }
 `;
 
@@ -46,6 +46,12 @@ export const Form = styled.form`
     font-size: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.fontSize};
     font-weight: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.fontWeight};
     line-height: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.lineHeight};
+  }
+
+  > .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {

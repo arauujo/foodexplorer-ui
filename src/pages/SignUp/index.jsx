@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { api } from "../../services/api";
 import { Container, Form } from "./styles";
+import { Label } from "../../components/Label";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { ButtonText } from "../../components/ButtonText";
@@ -45,29 +46,36 @@ export function SignUp() {
 
       <Form onKeyDown={handleKeydown}>
         <h2 className="desktop-only">Crie sua conta</h2>
-        <Input
-          label="Seu nome"
-          type="text"
-          placeholder="Exemplo: Maria da Silva"
-          autoComplete="name"
-          onChange={e => setName(e.target.value)}
-        />
 
-        <Input
-          label="Email"
-          type="email"
-          placeholder="Exemplo: exemplo@exemplo.com.br"
-          autoComplete="email"
-          onChange={e => setEmail(e.target.value)}
-        />
+        <div className="input-container">
+          <Label>Seu nome</Label>
+          <Input
+            type="text"
+            placeholder="Exemplo: Maria da Silva"
+            autoComplete="name"
+            onChange={e => setName(e.target.value)}
+          />
+        </div>
 
-        <Input
-          label="Senha"
-          type="password"
-          placeholder="No mínimo 6 caracteres"
-          autoComplete="new-password"
-          onChange={e => setPassword(e.target.value)}
-        />
+        <div className="input-container">
+          <Label>Email</Label>
+          <Input
+            type="email"
+            placeholder="Exemplo: exemplo@exemplo.com.br"
+            autoComplete="email"
+            onChange={e => setEmail(e.target.value)}
+          />
+        </div>
+
+        <div className="input-container">
+          <Label>Senha</Label>
+          <Input
+            type="password"
+            placeholder="No mínimo 6 caracteres"
+            autoComplete="new-password"
+            onChange={e => setPassword(e.target.value)}
+          />
+        </div>
 
         <Button title="Criar conta" onClick={handleSignUp} />
 
