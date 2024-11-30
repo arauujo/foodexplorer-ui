@@ -1,11 +1,12 @@
 import { Container } from "./styles";
 
-export function Input({ label, icon: Icon, ...rest }) {
+export function Input({ icon: Icon, className, ...rest }) {
   return (
-    <Container>
-      <label>{label}</label>
-      {Icon && <Icon size={20} />}
-      <input {...rest} />
+    <Container className={`${className} ${Icon ? "has-icon" : ""}`}>
+      <div className="input-wrapper">
+        {Icon && <Icon size={20} />}
+        <input {...rest} />
+      </div>
     </Container>
   );
 }

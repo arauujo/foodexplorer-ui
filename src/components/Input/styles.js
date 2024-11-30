@@ -3,8 +3,13 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  background-color: ${({ theme }) => theme.COLORS.DARK_900};
+  border-radius: 8px;
+
+  &:has(input:focus) {
+    outline: 1px solid ${({ theme }) => theme.COLORS.LIGHT_600};
+  }
 
   > label {
     font-family: ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR.fontFamily};
@@ -14,18 +19,29 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.LIGHT_400};
   }
 
-  > input {
-    padding: 16px 14px;
-    background-color: ${({ theme }) => theme.COLORS.DARK_900};
-    font-family: ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR.fontFamily};
-    font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR.fontSize};
-    font-weight: ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR.fontWeight};
-    line-height: ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR.lineHeight};
-    color: ${({ theme }) => theme.COLORS.LIGHT_400};
-    border-radius: 8px;
+  .input-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
 
-    &::placeholder {
-      color: ${({ theme }) => theme.COLORS.LIGHT_500};      
+    > input {
+      width: 100%;
+      padding: 16px 14px;
+      background: transparent;
+      border-radius: 8px;
+      font-family: ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR.fontFamily};
+      font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR.fontSize};
+      font-weight: ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR.fontWeight};
+      line-height: ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR.lineHeight};
+      color: ${({ theme }) => theme.COLORS.LIGHT_400};
+
+      &::placeholder {
+        color: ${({ theme }) => theme.COLORS.LIGHT_500};
+      }
+    }
+
+    svg {
+      color: ${({ theme }) => theme.COLORS.LIGHT_400};
     }
   }
 `;
