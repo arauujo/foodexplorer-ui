@@ -1,5 +1,4 @@
-import { FiMenu, FiSearch, FiLogOut } from "react-icons/fi";
-import { PiReceipt } from "react-icons/pi";
+import { PiList, PiReceipt, PiMagnifyingGlass, PiSignOut } from "react-icons/pi";
 import { useAuth } from "../../hooks/auth";
 import { Button } from "../Button";
 import { Label } from "../Label";
@@ -8,7 +7,7 @@ import polygonImg from "../../assets/polygon.svg";
 import { Container, Menu, OrdersButton, OrderQuantity, Logout } from "./styles";
 import { useNavigate } from "react-router-dom";
 
-export function Header() {
+export function Header({ onOpenMenu }) {
   const navigate = useNavigate();
   const { signOut } = useAuth();
   const isAdmin = false;
@@ -19,13 +18,13 @@ export function Header() {
   }
 
   function handleLogoClick() {
-    navigate("/test");
+    navigate("/");
   }
 
   return (
     <Container>
-      <Menu className="mobile-only">
-        <FiMenu size={22} />
+      <Menu className="mobile-only" onClick={onOpenMenu}>
+        <PiList size={29} />
       </Menu>
 
       <div className="logo-container" onClick={handleLogoClick}>
@@ -40,7 +39,7 @@ export function Header() {
       <Input
         className="desktop-only"
         placeholder="Busque por pratos ou ingredientes"
-        icon={FiSearch}
+        icon={PiMagnifyingGlass}
       />
 
       {!isAdmin && (
@@ -57,7 +56,7 @@ export function Header() {
       />
 
       <Logout className="desktop-only" onClick={handleSignOut}>
-        <FiLogOut size={32} />
+        <PiSignOut size={32} />
       </Logout>
     </Container>
   );
