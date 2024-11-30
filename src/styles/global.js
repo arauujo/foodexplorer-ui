@@ -47,6 +47,10 @@ export default createGlobalStyle`
     display: none;
   }
 
+  .mobile-only {
+    display: flex;
+  }
+
   &::-webkit-scrollbar {
     width: 0.5rem; 
     height: 0.5rem;
@@ -87,7 +91,7 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
-  button:focus-visible, input:focus-visible, textarea:focus-visible {
+  button:focus-visible, textarea:focus-visible {
     outline: 1px solid ${({ theme }) => theme.COLORS.LIGHT_600};
   }
 `;
