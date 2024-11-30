@@ -14,7 +14,7 @@ export function Button({ title, icon: Icon, onClick, ...rest }) {
   };
   return (
     <Container type="button" onClick={handleClick} disabled={isLoading} {...rest}>
-      {Icon && <Icon size={22} />}
+      {Icon && <Icon size={32} />}
       {isLoading ? "Carregando..." : title}
     </Container>
   );

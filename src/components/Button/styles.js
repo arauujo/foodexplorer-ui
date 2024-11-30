@@ -5,12 +5,15 @@ export const Container = styled.button`
   font-size: ${({ theme }) => theme.FONTS.POPPINS_100_MEDIUM.fontSize};
   font-weight: ${({ theme }) => theme.FONTS.POPPINS_100_MEDIUM.fontWeight};
   line-height: ${({ theme }) => theme.FONTS.POPPINS_100_MEDIUM.lineHeight};
-  padding: 12px 24px;
+  padding: 12px 46px;
   border-radius: 5px;
   background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 11px;
+  white-space: nowrap;
 
   &:hover {
     background-color: ${({ theme }) => theme.COLORS.TOMATO_200};
