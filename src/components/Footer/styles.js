@@ -17,9 +17,12 @@ export const Container = styled.div`
     align-items: center;
     gap: 0.46rem;
 
-    .polygon-logo {
+    svg.polygon-logo {
       height: 1.57rem;
-      fill: ${({ theme }) => theme.COLORS.LIGHT_700};
+
+      path {
+        fill: ${({ theme }) => theme.COLORS.LIGHT_700};
+      }
     }
 
     h2 {

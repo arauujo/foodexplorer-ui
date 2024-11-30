@@ -1,9 +1,9 @@
 import { PiList, PiReceipt, PiMagnifyingGlass, PiSignOut } from "react-icons/pi";
 import { useAuth } from "../../hooks/auth";
+import { Logo } from "../Logo";
 import { Button } from "../Button";
 import { Label } from "../Label";
 import { Input } from "../Input";
-import polygonImg from "../../assets/polygon.svg";
 import { Container, Menu, OrdersButton, OrderQuantity, Logout } from "./styles";
 import { useNavigate } from "react-router-dom";
 
@@ -28,7 +28,7 @@ export function Header({ onOpenMenu }) {
       </Menu>
 
       <div className="logo-container" onClick={handleLogoClick}>
-        <img src={polygonImg} alt="Logo" />
+        <Logo />
         <h1>food explorer</h1>
         {isAdmin && <span>admin</span>}
       </div>

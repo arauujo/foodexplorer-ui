@@ -15,7 +15,7 @@ export const Container = styled.div`
     justify-content: center;
     gap: 0.77rem;
 
-    img {
+    svg.polygon-logo {
       width: 3.1rem;
       height: 3.1rem;
     }
@@ -47,9 +47,13 @@ export const Form = styled.form`
     border-radius: 1rem;
     width: 29.75rem;
 
-    .desktop-only {
+    > .desktop-only {
       display: block;
       text-align: center;
+    }
+
+    > .input-container input {
+      border: 1px solid ${({ theme }) => theme.COLORS.LIGHT_100};
     }
   }
 
@@ -64,11 +68,5 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     gap: 8px;
-
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-      input {
-        border: 1px solid ${({ theme }) => theme.COLORS.LIGHT_100};
-      }
-    }
   }
 `;

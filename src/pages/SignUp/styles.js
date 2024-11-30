@@ -15,7 +15,7 @@ export const Container = styled.div`
     justify-content: center;
     gap: 0.77rem;
 
-    img {
+    svg.polygon-logo {
       width: 3.1rem;
       height: 3.1rem;
     }

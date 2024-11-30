@@ -18,8 +18,8 @@ export const Container = styled.header`
     justify-self: center;
     gap: 10px;
 
-    img {
-      width: 1.8rem;
+    svg.polygon-logo {
+      height: 1.79rem;
     }
 
     h1 {
@@ -61,7 +61,8 @@ export const Container = styled.header`
         gap: 0;
         cursor: pointer;
 
-        img {
+        svg.polygon-logo {
+          height: 1.87rem;
           margin-right: 10px;
         }
 

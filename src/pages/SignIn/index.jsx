@@ -2,11 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../../hooks/auth";
 import { Container, Form } from "./styles";
+import { Logo } from "../../components/Logo";
 import { Label } from "../../components/Label";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { ButtonText } from "../../components/ButtonText";
-import polygonImg from "../../assets/polygon.svg";
 
 export function SignIn() {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ export function SignIn() {
   return (
     <Container>
       <div className="logo-container">
-        <img src={polygonImg} alt="Logo" />
+        <Logo />
         <h1>food explorer</h1>
       </div>
 
