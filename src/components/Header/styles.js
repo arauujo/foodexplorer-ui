@@ -44,14 +44,6 @@ export const Container = styled.header`
     gap: 32px;
     padding: 1.75rem 7.69rem;
 
-    > .desktop-only {
-      display: flex;
-    }
-
-    > .mobile-only {
-      display: none;
-    }
-
     > .logo-container {
       @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
         display: grid;
