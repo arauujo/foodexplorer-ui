@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
