@@ -47,9 +47,8 @@ export const Form = styled.form`
     border-radius: 1rem;
     width: 29.75rem;
 
-    > .desktop-only {
-      display: block;
-      text-align: center;
+    h2.desktop-only {
+      align-self: center;
     }
 
     > .input-container input {
