@@ -9,22 +9,18 @@ export default createGlobalStyle`
   }
   
   :root {
-    font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALLEST_REGULAR.fontSize};
+    font-size: 12px;
 
     @media (min-width: ${DEVICE_BREAKPOINTS.SM}) {
-      font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALLER_REGULAR.fontSize}
-    }
-    
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-      font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALLER_REGULAR.fontSize};
+      font-size: 14px;
     }
 
     @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
-      font-size: ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR.fontSize};
+      font-size: 16px;
     }
 
     @media (min-width: ${DEVICE_BREAKPOINTS.XXL}) {
-      font-size: ${({ theme }) => theme.FONTS.ROBOTO_BIG_BOLD.fontSize};
+      font-size: 20px;
     }
   }
 
@@ -45,10 +41,18 @@ export default createGlobalStyle`
 
   .desktop-only {
     display: none;
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+      display: flex;
+    }
   }
 
   .mobile-only {
     display: flex;
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+      display: none;
+    }
   }
 
   &::-webkit-scrollbar {

@@ -56,7 +56,7 @@ export default {
     POPPINS_300_REGULAR: {
       fontFamily: '"Poppins", sans-serif',
       fontWeight: '400',
-      fontSize: '24px',
+      fontSize: '1.5rem',
       lineHeight: '140%',
     },
     POPPINS_400_MEDIUM: {
@@ -68,7 +68,7 @@ export default {
     POPPINS_500_MEDIUM: {
       fontFamily: '"Poppins", sans-serif',
       fontWeight: '500',
-      fontSize: '40px',
+      fontSize: '2.5rem',
       lineHeight: '140%',
     },
     ROBOTO_SMALLEST_REGULAR: {
@@ -98,7 +98,7 @@ export default {
     ROBOTO_SMALL_REGULAR: {
       fontFamily: '"Roboto", serif',
       fontWeight: '400',
-      fontSize: '16px',
+      fontSize: '1rem',
       lineHeight: '100%',
     },
     ROBOTO_BIG_BOLD: {
