@@ -5,7 +5,7 @@ export const Container = styled.header`
   background-color: ${({ theme }) => theme.COLORS.DARK_700};
   width: 100%;
   padding: 4rem 2rem 1.71rem 2rem;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   display: grid;
@@ -77,7 +77,7 @@ export const Container = styled.header`
       justify-content: center;
 
       input {
-        width: 280px;
+        width: 17.5rem;
       }
     }
   }
