@@ -35,6 +35,7 @@
         "noGlobalObjectCalls": "warn",
         "noInnerDeclarations": "off",
         "noUndeclaredVariables": "error",
+        "noUndeclaredDependencies": "off",
         "noUnreachable": "error",
         "noUnusedVariables": "error",
 				"useExhaustiveDependencies": "error",
