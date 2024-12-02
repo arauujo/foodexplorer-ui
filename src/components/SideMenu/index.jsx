@@ -1,8 +1,6 @@
 import { PiMagnifyingGlass, PiX } from "react-icons/pi";
-import { useAuth } from "../../hooks/auth";
-import { Label } from "../Label";
-import { Input } from "../Input";
-import { ButtonText } from "../ButtonText";
+import { useAuth } from "@hooks/auth";
+import { Label, Input, ButtonText } from "@components";
 import { Container, Header, Button, Title } from "./styles";
 
 export function SideMenu({ isOpen, onClose }) {

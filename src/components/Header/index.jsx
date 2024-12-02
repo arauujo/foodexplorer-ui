@@ -1,9 +1,6 @@
 import { PiList, PiReceipt, PiMagnifyingGlass, PiSignOut } from "react-icons/pi";
-import { useAuth } from "../../hooks/auth";
-import { Logo } from "../Logo";
-import { Button } from "../Button";
-import { Label } from "../Label";
-import { Input } from "../Input";
+import { useAuth } from "@hooks/auth";
+import { Logo, Button, Label, Input } from "@components";
 import { Container, Menu, OrdersButton, OrderQuantity, Logout } from "./styles";
 import { useNavigate } from "react-router-dom";
 

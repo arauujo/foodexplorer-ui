@@ -1,4 +1,4 @@
-import { Logo } from "../Logo";
+import { Logo } from "@components";
 import { Container } from "./styles";
 
 export function Footer() {

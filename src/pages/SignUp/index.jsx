@@ -1,11 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { api } from "../../services/api";
-import { Logo } from "../../components/Logo";
-import { Label } from "../../components/Label";
-import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
-import { ButtonText } from "../../components/ButtonText";
+import { api } from "@services/api";
+import { Logo, Label, Input, Button, ButtonText } from "@components";
 import { Container, Form } from "./styles";
 
 export function SignUp() {
