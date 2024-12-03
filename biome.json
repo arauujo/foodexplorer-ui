@@ -52,7 +52,8 @@
         "useCollapsedElseIf": "off",
         "useSingleVarDeclarator": "off",
 				"noNonNullAssertion": "off",
-        "useNamingConvention": "off"
+        "useNamingConvention": "off",
+        "useNumberNamespace": "off"
       },
       "suspicious": {
         "all": true,
