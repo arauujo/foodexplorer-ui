@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
+import { DEVICE_BREAKPOINTS } from "@styles/deviceBreakpoints";
 
 export const Container = styled.div`
   display: flex;
@@ -31,7 +31,7 @@ export const HeroSection = styled.section`
   }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-    margin: 10.25rem 7.75rem 2.57rem;
+    margin: 10.25rem 7.75rem 3.87rem 7.75rem;
     padding: 5.5rem 6.25rem 5.75rem 37.37rem;
     border-radius: 0.5rem;
 
@@ -85,6 +85,25 @@ export const HeroContent = styled.div`
   @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
     h1 {
       font-size: ${({ theme }) => theme.FONTS.POPPINS_500_MEDIUM.fontSize};
+    }
+  }
+`;
+
+export const MealsSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 1.71rem;
+  padding: 0 0 0 1.71rem;
+
+  .meals-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.14rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 `;
