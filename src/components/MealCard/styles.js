@@ -9,6 +9,7 @@ export const Container = styled.div`
   justify-content: center;
   gap: 0.86rem;
   max-width: 15rem;
+  min-width: 15rem;
   height: 20.86rem;
   padding: 0 1.71rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_200};
@@ -45,6 +46,7 @@ export const Container = styled.div`
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     padding: 0 1.5rem;
+    min-width: 19rem;
     max-width: 19rem;
     height: 28.87rem;
     gap: 0.94rem;
