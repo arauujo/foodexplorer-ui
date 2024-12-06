@@ -94,16 +94,43 @@ export const MealsSection = styled.section`
   flex-direction: column;
   gap: 1.71rem;
   padding: 0 0 0 1.71rem;
+  position: relative;
 
   .meals-grid {
+    position: relative;
     display: flex;
     flex-wrap: nowrap;
     gap: 1.14rem;
     overflow-x: auto;
     scrollbar-width: none;
 
-    &::-webkit-scrollbar {
+  &::-webkit-scrollbar {
       display: none;
     }
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    margin: 10.25rem 7.75rem 3.87rem 7.75rem;
+    padding: 0;
+
+    .scroll-button {
+    position: absolute;
+    top: 46%;
+    background-color: transparent;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+
+    &.left {
+      left: 1.36rem;
+    }
+
+    &.right {
+      right: 1.36rem;
+    }
+  }
   }
 `;
