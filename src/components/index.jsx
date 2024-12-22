@@ -6,6 +6,7 @@ import { Input } from "./Input";
 import { Label } from "./Label";
 import { Logo } from "./Logo";
 import { MealCard } from "./MealCard";
+import { MenuSwiper } from "./MenuSwiper";
 import { SideMenu } from "./SideMenu";
 
 export {
@@ -17,5 +18,6 @@ export {
   Label,
   Logo,
   MealCard,
+  MenuSwiper,
   SideMenu,
 };
