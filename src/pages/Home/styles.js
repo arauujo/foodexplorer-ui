@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "@styles/deviceBreakpoints";
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 `;
 
@@ -25,8 +26,10 @@ export const HeroSection = styled.section`
   }
 
   @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+    padding-left: 8rem;
+
     > img {
-      max-width: 12.5rem;
+      max-width: 9.5rem;
     }
   }
 
@@ -90,47 +93,26 @@ export const HeroContent = styled.div`
 `;
 
 export const MealsSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 1.71rem;
   padding: 0 0 0 1.71rem;
   position: relative;
+  margin-bottom: 1.71rem;
 
-  .meals-grid {
-    position: relative;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1.14rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-      display: none;
-    }
-  }
+  h2 {
+    font-family: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.fontFamily};
+    font-size: 1.29rem;
+    font-weight: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.fontWeight};
+    line-height: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.lineHeight};
+    color: ${({ theme }) => theme.COLORS.LIGHT_300};
+    margin-bottom: 1.71rem;
+  }  
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-    margin: 10.25rem 7.75rem 3.87rem 7.75rem;
+    margin: 0 7.75rem 3rem 7.75rem;
     padding: 0;
 
-    .scroll-button {
-    position: absolute;
-    top: 46%;
-    background-color: transparent;
-    color: ${({ theme }) => theme.COLORS.LIGHT_100};
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2;
-
-    &.left {
-      left: 1.36rem;
+    h2 {
+      font-size: ${({ theme }) => theme.FONTS.POPPINS_400_MEDIUM.fontSize};
+      margin-bottom: 1.44rem
     }
-
-    &.right {
-      right: 1.36rem;
-    }
-  }
   }
 `;

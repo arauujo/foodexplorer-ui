@@ -1,6 +1,5 @@
-import { useRef, useState } from "react";
-import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
-import { Header, SideMenu, MealCard, Footer } from "@components";
+import { useState } from "react";
+import { Header, SideMenu, MenuSwiper, Footer } from "@components";
 import heroMobileBanner from "@assets/hero-mobile-banner.png";
 import heroDesktopBanner from "@assets/hero-desktop-banner.png";
 import {
@@ -13,7 +12,6 @@ import { Container, HeroSection, HeroContent, MealsSection } from "./styles";
 
 export function Home() {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
-  const mealsRef = useRef(null);
 
   const handleOpenMenu = () => {
     setIsSideMenuOpen(true);
@@ -77,18 +75,6 @@ export function Home() {
     },
   ];
 
-  const scrollLeft = () => {
-    if (mealsRef.current) {
-      mealsRef.current.scrollBy({ left: -300, behavior: "smooth" });
-    }
-  };
-
-  const scrollRight = () => {
-    if (mealsRef.current) {
-      mealsRef.current.scrollBy({ left: 300, behavior: "smooth" });
-    }
-  };
-
   return (
     <Container>
       <Header onOpenMenu={handleOpenMenu} />
@@ -113,32 +99,7 @@ export function Home() {
 
       <MealsSection>
         <h2>Refeições</h2>
-
-        <button
-          className="scroll-button left desktop-only"
-          onClick={scrollLeft}
-        >
-          <PiCaretLeftBold size={39} />
-        </button>
-
-        <div className={"meals-grid"} ref={mealsRef}>
-          {meals.map(meal => (
-            <MealCard
-              key={meal.id}
-              name={meal.name}
-              description={meal.description}
-              price={meal.price}
-              imageUrl={meal.imageUrl}
-            />
-          ))}
-        </div>
-
-        <button
-          className="scroll-button right desktop-only"
-          onClick={scrollRight}
-        >
-          <PiCaretRightBold size={39} />
-        </button>
+        <MenuSwiper items={meals} />
       </MealsSection>
 
       <Footer />
