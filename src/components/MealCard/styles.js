@@ -62,6 +62,7 @@ export const Container = styled.div`
       font-weight: ${({ theme }) => theme.FONTS.ROBOTO_SMALLER_REGULAR.fontWeight};
       line-height: ${({ theme }) => theme.FONTS.ROBOTO_SMALLER_REGULAR.lineHeight};
       color: ${({ theme }) => theme.COLORS.LIGHT_400};
+      min-height: 3.2rem;
 
       // propriedades para limitar o número de linhas de um texto e truncar o overflow com um ellipsis
       display: -webkit-box;
