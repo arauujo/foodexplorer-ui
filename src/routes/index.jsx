@@ -5,6 +5,11 @@ import { useAuth } from "@hooks/auth";
 
 export function Routes() {
   const isAuthenticated = useAuth().user;
+
+  if (isAuthenticated === undefined) {
+    return <div>Carregando...</div>;
+  }
+
   return (
     <BrowserRouter>
       {isAuthenticated ? <AppRoutes /> : <AuthRoutes />}
