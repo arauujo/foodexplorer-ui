@@ -5,6 +5,7 @@ import {
   PiMinusBold,
   PiPlusBold,
 } from "react-icons/pi";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@components";
 import { Container, TitleSection, Actions } from "./styles";
 
@@ -15,12 +16,18 @@ export function MealCard({
   imageUrl,
   isAdmin = false,
 }) {
+  const navigate = useNavigate();
+  
   const formatPrice = price => {
     return parseFloat(price).toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
     });
   };
+
+  function handleItemDetails() {
+    navigate("/details");
+  }
 
   return (
     <Container>
@@ -36,6 +43,7 @@ export function MealCard({
         <button
           className="details-button"
           aria-label={`Ir para detalhes de ${name}`}
+          onClick={handleItemDetails}
         >
           <PiCaretRightBold />
         </button>
